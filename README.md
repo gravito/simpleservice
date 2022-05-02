@@ -1,3 +1,9 @@
+# Check this Blog
+
+This repo is created for this blog: 
+
+It contains the Docker file for Simple Service app, and the Kubernetes resources used for deploying it in EKS Fargate.
+
 # simple-service
 
 `simple-service` is an 'as easy as possible' golang HTTP api for examples and tests.
