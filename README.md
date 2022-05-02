@@ -2,7 +2,7 @@
 
 This repo is created for this blog: 
 
-It contains the Docker file for Simple Service app, and the Kubernetes resources used for deploying it in EKS Fargate.
+It contains the Docker file for Simple Service app, and the Kubernetes resources used for deploying it in EKS Fargate. Kubernetes resources are in "Kubernetes" folder.
 
 # simple-service
 
