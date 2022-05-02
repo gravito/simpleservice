@@ -1,8 +1,8 @@
 # Check this Blog
 
-This repo is created for this blog: 
+This repo is created for this blog: https://medium.com/@shrut_terminator/how-to-deploy-a-multi-container-two-tier-go-application-in-eks-fargate-6266494f5bcf
 
-It contains the Docker file for Simple Service app, and the Kubernetes resources used for deploying it in EKS Fargate. Kubernetes resources are in "Kubernetes" folder.
+Repo contains the Docker file for Simple Service app, and the Kubernetes resources used for deploying it in EKS Fargate. Kubernetes resources are in "Kubernetes" folder.
 
 # simple-service
 
