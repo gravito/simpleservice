@@ -17,13 +17,13 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                            docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                            docker.withRegistry('https://hub.docker.com', 'dockerhub') {
                             myapp.push("${env.BUILD_ID}")
                     }
                 }
             }
         }        
-        stage('Deploy to GKE') {
+        stage('Deploy to EKS') {
             steps{
                 sh "sed -i 's/simple-service:latest/simple-service:${env.BUILD_ID}/g' kubernetes/app-postgres-deployment.yaml"
                 sh "kubectl apply -f kubernetes/app-postgres-deployment.yaml"
