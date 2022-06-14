@@ -27,7 +27,7 @@ pipeline {
             steps{
                 sh "sed -i 's/simple-service:latest/simple-service:${env.BUILD_ID}/g' kubernetes/app-postgres-deployment.yaml"
                 script {
-                kubernetesDeploy(configs: "kuberentes/app-postgres-deployment.yaml", kubeconfigId: "kube")
+                kubernetesDeploy(configs: "kubernetes/app-postgres-deployment.yaml", kubeconfigId: "kube")
                 }
             }
         }
