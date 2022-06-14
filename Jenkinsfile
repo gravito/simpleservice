@@ -26,10 +26,9 @@ pipeline {
         stage('Deploy to EKS') {
             steps{
                 sh "sed -i 's/simple-service:latest/simple-service:${env.BUILD_ID}/g' kubernetes/app-postgres-deployment.yaml"
-                script {
-                kubernetesDeploy(configs: "kubernetes/app-postgres-deployment.yaml", kubeconfigId: "kube")
-                }
-            }
+                                sh "kubectl apply -f kubernetes/app-postgres-deployment.yaml"
+                sh "kubectl rollout restart deployment fullstack-app-postgres"
+             }
         }
     }    
 }
