@@ -10,7 +10,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("DOCKER-HUB-USERNAME/simple-service:${env.BUILD_ID}")
+                    myapp = docker.build("gravito/simple-service:${env.BUILD_ID}")
                 }
             }
         }
