@@ -32,5 +32,5 @@ func (h simpleHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fmt.Printf("%s - request with database\n", time.Now().Format(time.ANSIC))
-	w.Write([]byte("Well done :)"))
+	w.Write([]byte("Awesome! :)"))
 }
