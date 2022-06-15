@@ -27,7 +27,7 @@ pipeline {
             steps{
                 sh "sed -i 's/simple-service:latest/simple-service:${env.BUILD_ID}/g' kubernetes/app-postgres-deployment.yaml"
                                 sh "kubectl apply -f kubernetes/app-postgres-deployment.yaml"
-                sh "kubectl rollout restart deployment fullstack-app-postgres"
+                                sh "kubectl rollout restart deployment fullstack-app-postgres"
              }
         }
     }    
